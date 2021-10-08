@@ -18,7 +18,7 @@ public class Controller {
     @Autowired
     private UserService userService;
 
-    @Value(value = "${welcome.message}")
+    @Value(value = "${welcome.message}")  //states the default value for the variable
     private String message;
 //    @Value(value = "${car.brand")
 //    private String brand;
@@ -35,7 +35,7 @@ public class Controller {
         return message;
     }
 
-        @GetMapping("/get")
+        @GetMapping("/get2")
         public List<User> findAllUser() {
             return userService.getUser();
         }

@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-public class Demo18Application implements CommandLineRunner {
+public class Demo18Application implements CommandLineRunner {  //A bean should run when it is contained within a spring application i.e lets u execute the code after the application is started
 
 	@Autowired
 	private DataSource dataSource;
@@ -18,6 +18,6 @@ public class Demo18Application implements CommandLineRunner {
 	@Override
 	public void run(String... arg0) throws Exception
 	{
-		System.out.println("DataSource= "+dataSource);
+		System.out.println("DataSource= "+dataSource);   //DataSource= HikariDataSource (HikariPool-1)
 	}
 }
